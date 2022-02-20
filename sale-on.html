@@ -1,0 +1,73 @@
+<html>
+<head>
+
+<script src="https://assets.adobedtm.com/4ef014d90ea4/412c7da7644e/launch-776751a327dd-development.min.js" async></script>
+
+
+<script type="text/javascript">
+var digitalData=digitalData||{}; 
+digitalData.page={ 
+          pageInfo:{ 
+          pageName: "saleon:homepage", 
+          pageType: "home",
+		  title: "SaleOn Homepage"
+          }, 
+          category:{ 
+          primaryCategory: "home", 
+          subSection: "", 
+          subSubSection: "" 
+          } 
+} 
+digitalData.user={ 
+                     userInfo:{ 
+                                     authStatus: "auth",
+									 authUser: "saleonuser1",
+									 email: "saleon@gmail.com"
+                     } 
+} 
+digitalData.site={ 
+                     siteInfo:{ 
+                                     language:"en",
+                                     country:"US" 
+                     } 
+}
+</script>
+
+<script>
+
+function registerMe(first_name,last_name,email) {
+
+alert("clicked"+first_name);
+
+_satellite.track('user_register', {
+event_name: "user_register",
+event_category: "account",
+event_action: "click",
+event_label: "user_register",
+customer_email: email,
+customer_first_name: first_name,
+customer_last_name: last_name
+});
+
+}
+
+
+event.detail.event_name;
+</script>
+</head>
+<body>
+This is SaleOn
+
+<br><br><br><br><br><br>
+Register me:
+<br>First Name : <input type="text" id="firstname" />
+<br>Last Name : <input type="text" id="lastname"  />
+<br>Email : <input type="text" id="email"   />
+
+<br><input type="Submit" onclick="registerMe(document.getElementById('firstname').value)" />
+
+<!--
+<script src="https://assets.adobedtm.com/4ef014d90ea4/4dcd815db3f4/launch-28f58989b095-development.min.js" async></script>
+-->
+</body>
+</html>
